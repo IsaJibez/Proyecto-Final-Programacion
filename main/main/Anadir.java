@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
-public class Añadir extends JDialog {
+public class Anadir extends JDialog {
 	private JTextField tf1,tf2,tf3;
 	private JLabel lb1,lb2,lb3;
 
@@ -21,7 +21,7 @@ public class Añadir extends JDialog {
 	 */
 	public static void main(String[] args) {
 		try {
-			Añadir dialog = new Añadir();
+			Anadir dialog = new Anadir();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {
@@ -32,7 +32,7 @@ public class Añadir extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public Añadir() {
+	public Anadir() {
 		getContentPane().setBackground(new Color(0, 0, 51));
 		setTitle("A\u00F1adir");
 		setBounds(100, 100, 453, 238);
@@ -98,7 +98,7 @@ void ad() {
 		String price=tf2.getText();
 		String stock=tf3.getText();
 		 ((java.sql.Statement)state).executeUpdate("insert into componentes(n_articulo,precio,stock)values('"+nombre+"','"+price+"','"+stock+"')");
-		 JOptionPane.showInternalMessageDialog( null, "El producto "+nombre+" Ha sido insertado exitosamente","Añadido exitosamente", JOptionPane.INFORMATION_MESSAGE);
+		 JOptionPane.showInternalMessageDialog( null, "El producto "+nombre+" Ha sido insertado exitosamente","Aï¿½adido exitosamente", JOptionPane.INFORMATION_MESSAGE);
 	}catch(ClassNotFoundException o) {
 
 		o.getStackTrace();

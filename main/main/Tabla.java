@@ -132,12 +132,12 @@ public class Tabla extends JFrame {
 		lblNewLabel_1.setBounds(34, 91, 46, 14);
 		contentPane.add(lblNewLabel_1);
 		
-		JButton btnEliminar_1 = new JButton("Cerrar sesión");
+		JButton btnEliminar_1 = new JButton("Cerrar sesiï¿½n");
 		btnEliminar_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					con.close();
-					JOptionPane.showMessageDialog(null, "Sesión cerrada");
+					JOptionPane.showMessageDialog(null, "Sesiï¿½n cerrada");
 					System.exit(ABORT);
 				} catch (SQLException e1) {
 					e1.printStackTrace();
@@ -149,11 +149,11 @@ public class Tabla extends JFrame {
 	}
 	
 	public void filtrarDatos(String valor) {
-		String [] títulos = {"Nombre", "Apellido", "Email", "Usuario"};
+		String [] titulo = {"Nombre", "Apellido", "Email", "Usuario"};
 		String [] registros = new String[4];
 		Statement st;
 		ResultSet rs;
-		modelo = new DefaultTableModel(null, títulos);
+		modelo = new DefaultTableModel(null, titulo);
 		String SQL = "select * from usuarios where username like '%"+valor+"%'";
 		 
 		 try {
@@ -174,11 +174,11 @@ public class Tabla extends JFrame {
 	}
 	@SuppressWarnings("static-access")
 	public void VerUsuarios() {
-		String [] títulos = {"Nombre", "Apellido", "Email", "Usuario"};
+		String [] titulo = {"Nombre", "Apellido", "Email", "Usuario"};
 		String [] registros = new String[4];
 		Statement st;
 		ResultSet rs;
-		modelo = new DefaultTableModel(null, títulos);
+		modelo = new DefaultTableModel(null, titulo);
 		String SQL = "select * from usuarios";
 		 try {
 			 st = cc.getConnection().createStatement();

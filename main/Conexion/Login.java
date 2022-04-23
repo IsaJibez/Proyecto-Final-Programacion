@@ -25,10 +25,9 @@ import java.awt.event.ActionEvent;
 
 public class Login {
 
-	//Inicializacion de las variables 
 	private JFrame frame;
 	private JTextField txtUsuario;
-	private JPasswordField txtContrase�a;
+	private JPasswordField txtContrasena;
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_1;
 	private JButton btnLogin;
@@ -61,7 +60,7 @@ public class Login {
 	//Inicializa el panel de contenido
 	
 	private void initialize() {
-		frame = new JFrame("Iniciar sesi�n");
+		frame = new JFrame("Iniciar sesinn");
 		frame.setResizable(false);
 		frame.setBounds(100, 100, 828, 686);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -87,10 +86,10 @@ public class Login {
 		panel.add(txtUsuario);
 		txtUsuario.setColumns(10);
 		
-		txtContrase�a = new JPasswordField();
-		txtContrase�a.setBorder(null);
-		txtContrase�a.setBounds(78, 338, 197, 26);
-		panel.add(txtContrase�a);
+		txtContrasena = new JPasswordField();
+		txtContrasena.setBorder(null);
+		txtContrasena.setBounds(78, 338, 197, 26);
+		panel.add(txtContrasena);
 		
 		lblNewLabel = new JLabel("Usuario:");
 		lblNewLabel.setForeground(Color.BLACK);
@@ -108,11 +107,10 @@ public class Login {
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				//Preparaci�n del inicio de sesin
 				PreparedStatement ps;
 				ResultSet rs;
 				String uname = txtUsuario.getText();
-				String pass = String.valueOf(txtContrase�a.getPassword());
+				String pass = String.valueOf(txtContrasena.getPassword());
 				
 				String query = "SELECT * FROM `usuarios` WHERE `username` =? AND `pass` =?";
 				try {
@@ -127,7 +125,7 @@ public class Login {
 						frame.dispose();
 					}
 					else {
-						JOptionPane.showMessageDialog(null, "Nombre de Usuario o Contrase�a incorrecta");
+						JOptionPane.showMessageDialog(null, "Nombre de Usuario o Contrasena incorrecta");
 					}
 				} catch (SQLException e1) {
 					e1.printStackTrace();
@@ -140,12 +138,12 @@ public class Login {
 		btnLogin.setBounds(98, 395, 157, 34);
 		panel.add(btnLogin);
 		
-		JLabel lblContrase�a = new JLabel();
-		lblContrase�a.setBounds(21, 323, 45, 43);
+		JLabel lblContrasena = new JLabel();
+		lblContrasena.setBounds(21, 323, 45, 43);
 		ImageIcon imagen1 = new ImageIcon(getClass().getResource("/Images/cerrar-con-llave.png"));
-		Icon fondo1 = new ImageIcon(imagen1.getImage().getScaledInstance(lblContrase�a.getWidth(), lblContrase�a.getHeight(), Image.SCALE_DEFAULT));
-		lblContrase�a.setIcon(fondo1);
-		panel.add(lblContrase�a);
+		Icon fondo1 = new ImageIcon(imagen1.getImage().getScaledInstance(lblContrasena.getWidth(), lblContrasena.getHeight(), Image.SCALE_DEFAULT));
+		lblContrasena.setIcon(fondo1);
+		panel.add(lblContrasena);
 		
 		lblUsuario = new JLabel(); 
 		lblUsuario.setBounds(10, 242, 58, 53);
@@ -154,12 +152,12 @@ public class Login {
 		lblUsuario.setIcon(fondo2);
 		panel.add(lblUsuario);
 	
-		lblNewLabel_5 = new JLabel("Registrarse");
+		lblNewLabel_5 = new JLabel("");
 		lblNewLabel_5.setFont(new Font("Arial", Font.PLAIN, 13));
 		lblNewLabel_5.setBounds(45, 453, 129, 14);
 		panel.add(lblNewLabel_5);
 		
-		lblRegister = new JLabel("");
+		lblRegister = new JLabel("Registrarse");
 		lblRegister.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {

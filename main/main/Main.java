@@ -82,7 +82,7 @@ public class Main {
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("A\u00F1adir");
 		mntmNewMenuItem_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				añadir();
+				Anadir();
 			}
 		});
 		mnNewMenu_2.add(mntmNewMenuItem_1);
@@ -133,8 +133,8 @@ public class Main {
 		Borrar b=new Borrar();
 		b.setVisible(true);
 	}
-	void añadir() {
-		Añadir add=new Añadir();
+	void Anadir() {
+		Anadir add=new Anadir();
 		add.setVisible(true);
 	}
 	void Credits() {

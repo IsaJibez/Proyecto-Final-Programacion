@@ -24,13 +24,12 @@ import javax.swing.border.BevelBorder;
 @SuppressWarnings("serial")
 public class Register extends JFrame{
 
-	//Inicialización de las variables
 	private JFrame frame;
 	private JTextField txtNombre;
 	private JTextField txtApellido;
 	private JTextField txtEmail;
 	private JTextField txtUsuario;
-	private JPasswordField txtContraseña;
+	private JPasswordField txtContrasena;
 
 	 
 	 
@@ -101,7 +100,7 @@ public class Register extends JFrame{
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				//Botón para volver a la ventana de incio de sesión
+				//Botnn para volver a la ventana de incio de sesinn
 				@SuppressWarnings("unused")
 				Login login = new Login();
 				Login.main(null);
@@ -116,19 +115,19 @@ public class Register extends JFrame{
 		btnRegister.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				//Botón para la creación del usuario
+				//Botnn para la creacinn del usuario
 				String fname, lname, email, uname, pass;  
 				fname = txtNombre.getText();
 				lname = txtApellido.getText();
 				uname = txtUsuario.getText();
-				pass = String.valueOf(txtContraseña.getPassword());
+				pass = String.valueOf(txtContrasena.getPassword());
 				email = txtEmail.getText();
 				
 				if(uname.equals("")) {
-					JOptionPane.showMessageDialog(null , "Añada un nombre de Usuario y/o correo electronico.");
+					JOptionPane.showMessageDialog(null , "Anada un nombre de Usuario y/o correo electronico.");
 				} 
 				else if(pass.equals("")) {
-					JOptionPane.showMessageDialog(null , "Escriba una contraseña!");
+					JOptionPane.showMessageDialog(null , "Escriba una contrasena!");
 				} 
 				else if(checkUsername(uname)) {
 					JOptionPane.showMessageDialog(null , "This username already exists!");
@@ -162,7 +161,7 @@ public class Register extends JFrame{
 		btnRegister.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
 		btnRegister.setBounds(223, 463, 111, 33);
 		frame.getContentPane().add(btnRegister);
-		//Finalización de la creación del usuario
+		//Finalizacinn de la creacinn del usuario
 		
 		txtNombre = new JTextField();
 		txtNombre.setBounds(134, 139, 190, 20);
@@ -184,9 +183,9 @@ public class Register extends JFrame{
 		txtUsuario.setBounds(134, 313, 190, 20);
 		frame.getContentPane().add(txtUsuario);
 		
-		txtContraseña = new JPasswordField();
-		txtContraseña.setBounds(134, 374, 190, 20);
-		frame.getContentPane().add(txtContraseña);
+		txtContrasena = new JPasswordField();
+		txtContrasena.setBounds(134, 374, 190, 20);
+		frame.getContentPane().add(txtContrasena);
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(255, 165, 0));

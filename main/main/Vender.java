@@ -91,7 +91,7 @@ public class Vender extends JFrame {
 		btn1 = new JButton("A\u00F1adir al Carrito");
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				AñadirCarrito();
+				AnadirAlCarro();
 			}
 		});
 		btn1.setBounds(474, 492, 130, 23);
@@ -210,7 +210,7 @@ void buscarProductos()  {
 			e1.printStackTrace();
 		}
 }
- void AñadirCarrito() {
+ void AnadirAlCarro() {
 	 String ana= (String) tabadd.getValueAt(table.getSelectedRow(), 1);
 	 String ana2= (String) tabadd.getValueAt(table.getSelectedRow(), 2);
 	 int ana3= (int) spinner.getValue();
